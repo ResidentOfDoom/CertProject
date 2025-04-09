@@ -1,0 +1,34 @@
+.timer {
+  width: 120px;
+  height: 40px;
+  border-radius: 10%;
+  background: rgb(65, 65, 65);
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 20px;
+  border: 3px solid rgb(57, 57, 57); /* Initial border color */
+  border-top-color: rgb(65, 184, 131); /* Initial top border color */
+  transition: border-color 1s ease-in-out; /* Transition for border color */
+}
+
+.timer.red {
+  background: rgb(127, 0, 0); /* Final background color */
+  border-color: red; /* Final border color */
+}
+
+.timer.orange {
+  background: rgb(116, 75, 0); /* Intermediate background color */
+  border-color: orange; /* Intermediate border color */
+}
+
+.timer.green {
+  background: rgb(0, 74, 0); /* Initial background color */
+  border-color: green; /* Initial border color */
+}
+
+.clock {
+  padding-left: 5px;
+  padding-right: 5px;
+}

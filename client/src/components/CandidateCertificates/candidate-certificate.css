@@ -1,0 +1,201 @@
+.menu {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  padding: 20px;
+  background-color: #f8f8f8; /* Light background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.menu button {
+  background-color: #4caf50; /* Green color for buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Adequate padding for button size */
+  margin: 0 10px; /* Space between buttons */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Readable font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.add-certificate {
+  margin-top: 1vh;
+}
+
+.add-certificate button {
+  background-color: #4caf50; /* Green color for buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Adequate padding for button size */
+  margin: 0 10px; /* Space between buttons */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Readable font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.add-certificate button:hover {
+  background-color: #367c39; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight raise effect on hover */
+}
+
+.add-certificate button:focus {
+  outline: none; /* Remove outline on focus for a cleaner look */
+  box-shadow: 0 0 3pt 2pt #367c39; /* Subtle focus effect */
+}
+
+.menu button:hover {
+  background-color: #367c39; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight raise effect on hover */
+}
+
+.menu button:focus {
+  outline: none; /* Remove outline on focus for a cleaner look */
+  box-shadow: 0 0 3pt 2pt #367c39; /* Subtle focus effect */
+}
+
+/* Certificates.css */
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center children by default */
+  padding: 20px;
+}
+
+section > article:only-child {
+  /* Center the article when it's the only child */
+  margin: 0 auto;
+}
+article {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  width: 300px; /* Fixed width for articles */
+  max-width: 100%; /* To ensure responsiveness on smaller screens */
+  margin: 10px; /* Space between articles */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Ensure articles are displayed next to each other */
+@media (min-width: 601px) {
+  section {
+    justify-content: flex-start; /* Align articles to the start */
+  }
+}
+
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+h4,
+h2,
+.title,
+.certificate-title {
+  font-size: 1.2em; /* Adjusted font size */
+  color: #2a2a2a;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  overflow-wrap: break-word; /* Break long words */
+}
+
+p,
+.author {
+  font-size: 1em;
+  color: #555;
+  text-align: center;
+}
+
+.certificate-link {
+  color: #000;
+  text-decoration: none;
+  display: block; /* Ensure link occupies the entire grid item */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+  article {
+    height: auto; /* Flexible height for smaller screens */
+  }
+
+  h4,
+  h2,
+  .title,
+  .certificate-title,
+  p,
+  .author {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Media Query for medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+  article {
+    height: 350px; /* Adjust height for medium screens */
+  }
+}
+
+/* Additional media queries can be added as needed */
+/* TROLL */
+@keyframes backgroundChange {
+  0% {
+    background-color: blue;
+  }
+  33% {
+    background-color: black;
+  }
+  66% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.fancyAnime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: backgroundChange 3s linear infinite;
+}
+
+.loading-animation {
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 20px;
+  animation: bounce 1s ease infinite;
+  position: relative;
+}
+
+.loading-animation:hover {
+  animation: none;
+  /* Additional styling for hover state if needed */
+}
