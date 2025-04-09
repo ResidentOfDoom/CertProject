@@ -20,16 +20,12 @@ namespace CertProject.Services
 
         public void CreateCandidate(CandidateDTO candidateDTO)
         {
-            
-                      
-        
-             
             //encrypt the password
             var passwordHasher = new PasswordHasher<Candidate>();
             var encryptedPassword = passwordHasher.HashPassword(new Candidate(), candidateDTO.Password);
 
 
-            int maxCandidateNumber = context.Candidates.Max(c => (int?)c.CandidateNumber) ?? 1000; // Starting from 1001
+            int maxCandidateNumber = context.Candidates.ToList().Max(c => (int?)c.CandidateNumber) ?? 1000; // Starting from 1001
             var candidate = new Candidate
             {
                 // Assuming CandidateID is set elsewhere or automatically
@@ -63,8 +59,8 @@ namespace CertProject.Services
 
             context.Candidates.Add(candidate);
             context.SaveChanges();
-        
         }
+
         public void UpdateCandidate(int candidateNumber,CandidateDTO candidateDTO)
         {
             //Make user able to change whatever he wants 

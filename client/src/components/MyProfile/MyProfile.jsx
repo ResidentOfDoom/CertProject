@@ -1,6 +1,6 @@
 import { useUserCookie } from "hooks";
 import React, { useEffect, useState } from "react";
-import "./myprofile.css";
+import "./MyProfile.css";
 
 export default function MyProfile() {
   // Initial user data

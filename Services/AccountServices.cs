@@ -58,10 +58,10 @@ namespace CertProject.Services
             }
 
             var claims = new List<Claim>
-    {
-        new Claim("id", candidate.UserID.ToString()),
-        // Add other claims as needed
-    };
+            {
+                new Claim("id", candidate.UserID.ToString()),
+                // Add other claims as needed
+            };
 
             string strKey = configuration["JwtSettings:Key"];
             if (string.IsNullOrEmpty(strKey))

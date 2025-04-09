@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using CertProject.Models;
 using CertProject.Services;
 
@@ -43,7 +42,8 @@ namespace CertProject.Controllers
         [HttpPost("/admin/add-candidate")]
         public IActionResult addCandidate(CandidateDTO candidateDTO, string email, string password)
         {
-            if (adminsServices.isAdmin(email, password)) { candidateServices.CreateCandidate(candidateDTO);
+            if (adminsServices.isAdmin(email, password)) { 
+                candidateServices.CreateCandidate(candidateDTO);
                 return Ok();
             }
             else { return BadRequest("User is not an admin."); }

@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using CertProject.Models;
+﻿using CertProject.Models;
 
 namespace CertProject.Services
 {
@@ -70,6 +69,7 @@ namespace CertProject.Services
             context.Candidates.Add(candidate);
             context.SaveChanges();
         }
+
         public bool isAdmin(string email, string password)
         {
             var user = context.Users.FirstOrDefault(x => x.Email == email && x.Password == password);

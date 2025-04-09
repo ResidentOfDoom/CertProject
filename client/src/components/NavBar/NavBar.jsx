@@ -23,7 +23,7 @@ const NavBar = ({ cookieValue }) => {
               <Link to="/Certificates">Certificates</Link>
             </li>
             <li>
-              <Link to="/Certificatestatus">poutsaki</Link>
+              <Link to="/Certificatestatus">Status</Link>
             </li>
 
             <li>

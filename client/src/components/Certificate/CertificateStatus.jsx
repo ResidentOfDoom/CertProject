@@ -25,7 +25,7 @@ const CertificateStatus = () => {
   }, []);
 
   return (
-    <>hello faggg</>
+    <>hello</>
     // <CustomTable
     //   columns={undefined}
     //   rows={undefined}

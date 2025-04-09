@@ -16,8 +16,6 @@ namespace CertProject.Controllers
             this.candidateServices = candidateServices;
         }
 
-
-
         //[HttpGet("{id}")]   // Show Candidate
         //public IActionResult GetCandidate(int id)
         //{

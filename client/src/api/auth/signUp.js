@@ -1,3 +1,5 @@
+import { instance as axios } from '../axios'
+
 export const signUp = async (data) => {
   try {
     const response = await fetch("http://localhost:5021/api/Candidates", {
