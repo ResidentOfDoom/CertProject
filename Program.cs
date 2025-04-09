@@ -42,7 +42,7 @@ builder.Services.AddScoped<CertificateServices>();
 
 builder.Services.AddDbContext<ApplicationDBContext>(options =>
 {
-    string? connectioString = builder.Configuration.GetConnectionString("PeopleCertDB");
+    string? connectioString = builder.Configuration.GetConnectionString("CertProject");
     options.UseSqlServer(connectioString);
 });
 
